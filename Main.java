@@ -20,18 +20,16 @@ public class Main {
             saxParser.parse(inputFile, userHandler);
 
             Vector<Booking> bookingList = userHandler.getBookings();
-            // for (Booking booking : bookingList) {
-            //     System.out.println(booking);
-            // }
 
             boolean exit = false;
             Scanner sc = new Scanner(System.in);
 
             while (!exit) {
-                System.out.println("Introduzca un identificador para ver la información correspondiente. \n Si introduce -1, se sale del programa");
+                System.out.println(
+                        "Introduzca un identificador para ver la información correspondiente. \n Si introduce -1, se sale del programa");
                 int valor = sc.nextInt();
                 if (valor != -1) {
-                    Booking selectedBooking = bookingList.get(valor);
+                    Booking selectedBooking = bookingList.get(valor-1);
                     System.out.println("Información de la reserva seleccionada:");
                     System.out.println(selectedBooking);
 
