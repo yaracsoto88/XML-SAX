@@ -8,9 +8,8 @@ public class Booking {
     private String check_in;
     private int room_nights;
 
-
-
-    public Booking(String booking, String client, String agency, Double price, String room, String hotel, String check_in, int room_nights) {
+    public Booking(String booking, String client, String agency, Double price, String room, String hotel,
+            String check_in, int room_nights) {
         this.booking = booking;
         this.client = client;
         this.agency = agency;
@@ -88,22 +87,18 @@ public class Booking {
         this.room_nights = room_nights;
     }
 
-
-
     @Override
     public String toString() {
         return "{" +
-            " booking='" + getBooking() + "'" +
-            ", client='" + getClient() + "'" +
-            ", agency='" + getAgency() + "'" +
-            ", price='" + getPrice() + "'" +
-            ", room='" + getRoom() + "'" +
-            ", hotel='" + getHotel() + "'" +
-            ", check_in='" + getCheck_in() + "'" +
-            ", room_nights='" + getRoom_nights() + "'" +
-            "}";
+                " booking='" + getBooking() + "'" +
+                ", client='" + getClient() + "'" +
+                ", agency='" + getAgency() + "'" +
+                ", price='" + getPrice() + "'" +
+                ", room='" + getRoom() + "'" +
+                ", hotel='" + getHotel() + "'" +
+                ", check_in='" + getCheck_in() + "'" +
+                ", room_nights='" + getRoom_nights() + "'" +
+                "}";
     }
 
-    
-    
 }

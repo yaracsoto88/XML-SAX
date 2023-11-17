@@ -7,9 +7,8 @@ import org.xml.sax.helpers.DefaultHandler;
 public class XMLSAXHandler extends DefaultHandler {
     private Booking currentBooking;
     private StringBuilder currentData;
-    Vector<Booking> bookings= new Vector<>();
-    
-    
+    Vector<Booking> bookings = new Vector<>();
+
     @Override
     public void startDocument() throws SAXException {
         System.out.println("Inicio del Documento");
@@ -17,7 +16,7 @@ public class XMLSAXHandler extends DefaultHandler {
 
     @Override
     public void endDocument() throws SAXException {
-       System.out.println("Fin del documento");
+        System.out.println("Fin del documento");
     }
 
     @Override
@@ -26,7 +25,7 @@ public class XMLSAXHandler extends DefaultHandler {
 
         if ("booking".equals(qName)) {
             currentBooking = new Booking();
-           
+
             String locationNumber = attributes.getValue("location_number");
             currentBooking.setBooking(locationNumber);
         }
@@ -56,11 +55,10 @@ public class XMLSAXHandler extends DefaultHandler {
         } else if ("booking".equals(qName)) {
             bookings.add(currentBooking);
         }
-        
+
     }
 
     public Vector<Booking> getBookings() {
         return bookings;
     }
-    }
-
+}
